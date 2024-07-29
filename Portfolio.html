@@ -1,0 +1,149 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#00">
+	<title>Pixelated Dreams</title>
+	<link rel="stylesheet" type="text/css" href="style3.css">
+  <link rel="icon" type="image/x-icon" href="/Images/PD favicon.ico">
+ 
+  
+</head>
+<body>
+
+	<div id="header">
+    <div class="container"> 
+		<nav>
+      <img src="Images/Pixelated Dreams.png" class="logo">
+			<ul>
+				<li><a href="Portfolio.html">Home</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="contactus.html">Contact Us</a></li>
+			</ul>
+		</nav>
+  </div>
+</div>
+
+
+	<main>
+		<section>
+			<h1>Welcome to Pixelated Dreams!</h1>
+			<p>Pixelated Dreams is a software development firm dedicated to making your dreams a reality. We specialize in web and mobile applications, and our team of expert developers and designers are ready to bring your ideas to life.</p>
+		</section>
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <h2> Founder </h2> <br> <br/>
+            <img src="Images/Secretary Kim.jpg" alt ="Avatar">
+          </div>
+          <div class="about-col-2">
+            <h2 class="sub-title"> About Me </h2>
+
+            <div class="tab-titles">
+              <p class="=tab-links active-link" onclick="opentab('Skills')"> Skills </p>
+              <p class="=tab-links" onclick="opentab('Experience')"> Experience </p>
+              <p class="=tab-links" onclick="opentab('Education')"> Education </p>
+            </div>
+
+            <div class="tab-contents active-tab" id="Skills"> 
+              <ul>
+                <li><span>Rating- 5/5</span><br>HTML</li>
+                <li><span>Rating- 5/5</span><br>CSS</li>
+                <li><span>Rating- 4/5</span><br>JavaScript</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="Experience">
+              <ul>
+                <li><span>2022- Current</span><br>Software Engineer at XYZ Company </li>
+                <li><span>2019 - 2022</span><br>Web Developer at ABC Agency </li>
+                <li><span>2018 - 2019</span><br>Internship at Mekart Commerce
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="Education">
+              <ul>
+                <li><span>2017</span><br>Training at ET Institute</li>
+                <li><span>2016</span><br>Masters in Computer Science from Aston University </li>
+                <li><span>2012 - 2015</span><br>BSc Computer Science from Aston University</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+        <!-----------Co-founder ----------->
+      <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <h2> Co-Founder</h2> <br> <br/>
+              <img src="Images/Park Seo Joon.jpg" alt ="Avatar"> <br> <br/> 
+              <br> <br/>
+            </div>
+           
+            
+
+
+        <!-------previous clients------>
+        <div id="previous clients">
+          <div class="container">
+            <h2 class="sub-title"> Our previous clients </h2> 
+            <div class="client-list">
+              <div>
+                <h3>Jeong Corporation</h3>
+                <p>This is a leading manufacturing company that needed a custom web application to manage their inventory and supply chain. Pixelated Dreams delivered a robust solution that streamlined their processes and increased their efficiency.</p>
+              </div>
+
+              <div>
+                <h3> Non-Profit</h3> 
+                <p>This is a charitable organization that required a new website to showcase their work and accept donations. Pixelated Dreams created a beautiful and user-friendly website that helped them attract more donors and support their cause.</p>
+              </div>
+
+              <div>
+                <h3>ARMY Startup</h3> 
+                <p>This is a new technology company that needed a mobile app to launch their product. Pixelated Dreams developed a cutting-edge app that exceeded their expectations and helped them gain traction in the market.</p>
+              </div>
+
+              <div>
+                <h3>BTS Consulting</h3> 
+                <p>This is a business consulting firm that required a new website to attract more clients and showcase their expertise. Pixelated Dreams created a professional and polished website that helped them stand out in their industry.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	</main>
+
+  <!-- javascript section-->
+  <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){ 
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){ 
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+
+  </script>
+
+<br> <br/>
+
+	<footer>
+		<p>Copyright &copy; 2023 Pixelated Dreams</p>
+    <p> Made with &#10084; by Harleen Kaur </p>
+	</footer>
+   
+</body>
+</html>

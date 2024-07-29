@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00">
+    <title> Contact Us </title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="icon" type="image/x-icon" href="/Images/PD favicon.ico">
+    <script src="https://kit.fontawesome.com/a335c922d0.js" crossorigin="anonymous"></script>
+    <!--<script defer src="condition.js"></script> -->
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Pixelated Dreams.png" class="logo">
+                <ul>
+                    <li><a href="Portfolio.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <br> <br />
+    <!-------Contact Us------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Us</h1>
+                    <p> <i class="fa-solid fa-signature"></i> Harleen Kaur </p>
+                    <p> <i class="fa-solid fa-paper-plane"></i> 220147097@aston.ac.uk </p>
+                    <p> <i class="fa-solid fa-id-card"></i> 220147097 </p>
+                    <div class="social-icons">
+                        <a href="https://github.com/topics/github-profile"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://uk.linkedin.com/company/linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://twitter.com/Twitter"><i class="fa-brands fa-square-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form  id="registration" method="post">  <!--put class as form here-->
+
+                        <input type="text" id="txtName" name="textName" placeholder="Name" required>
+                        <h3> How would you like us to contact you?</h3>
+
+                        <label><input type="checkbox" name="cbx" id="cbxEmail"  />E-mail</label>
+                        <label><input type="checkbox" name="cbx" id="cbxPhone"  />Phone</label>
+                        <input type="email" id="txtEmail" name="email" placeholder="Email" required>
+                        <input type="email" id="txtConfirmEmail" name="email" placeholder="Confirm Email" required>
+                        <input type="text" id="txtProposal" name="Proposal" placeholder="Propose a potential project"
+                            required>
+                        <p>Expected start date for the proposal -</p>
+                        <input type="date" id="proposedDateInput" required>
+                        <p> Expected end- date for the proposal -</p>
+                        <input type="date" id="proposedDurationInput" required> <!--TO BE CHECKED AGAIN-->
+                        <textarea id="msg" name="Message" rows="6" placeholder="Any additional information"></textarea>
+                        <div id="Message"></div> <br>
+                        <button type="Submit"  class="button">Submit</button> <br> <br />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var form = document.getElementById('registration')
+
+    var error = []
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault()
+
+        var mName = document.getElementById('txtName')
+        var txtConfirmEmail = document.getElementById('txtConfirmEmail')
+        var txtEmail = document.getElementById('txtEmail')
+        var bln=false;
+
+        if (mName.value == "") {
+            error.push("Please enter name")
+            bln =true;
+        }
+
+        if (txtEmail.value == "") {
+            error.push("Please enter your email")
+            bln =true;
+        }
+
+        if (txtConfirmEmail.value == "") {
+            error.push("Please enter your confirmed email")
+            bln =true;
+        }
+
+        if (txtConfirmEmail.value != txtEmail.value) {
+            error.push("Emails are not same")
+            bln =true;
+        }
+
+        const proposedDate = new Date(document.getElementById('proposedDateInput').value);
+        const proposedDuration = parseInt(document.getElementById('proposedDurationInput').value);
+
+        // Check if proposed date is at least one day in the future
+        const now = new Date();
+        if (proposedDate <= now) { 
+            error.push("Proposed date must be at least one day in the future")
+            bln =true;
+        }
+        var Message = document.getElementById('Message')
+        Message.innerText = error
+
+        if(bln==false)
+        {
+            callValue();
+        }
+        return false;
+    })
+
+    function callValue(){
+        var mName = document.getElementById('txtName').value;
+        var cbxEmail = document.getElementById('cbxEmail')
+        var cbxPhone = document.getElementById('cbxPhone')
+        var txtEmail = document.getElementById('txtEmail').value;
+        var txtConfirmEmail = document.getElementById('txtConfirmEmail').value;
+        var txtProposal = document.getElementById('txtProposal').value;
+        var proposedDateInput = document.getElementById('proposedDateInput').value;
+        var proposedDurationInput = document.getElementById('proposedDurationInput').value;
+        var msg = document.getElementById('msg').value;
+
+    document.writeln("Please check your details:" + "<br>" +"</br>" + "Name:" + "<br>" + mName + "<br>" +"</br>");
+    document.writeln("Contact by Email:" + "<br>" + cbxEmail.checked + "<br>" + "<br/>"); 
+    document.writeln("Contact by Phone:" + "<br>" + cbxPhone.checked + "<br>" + "<br/>"); 
+    document.writeln("Email:" + "<br>" + txtEmail+ "<br>" + "<br/>"); 
+    document.writeln("Confirmed Email:" + "<br>" + txtConfirmEmail + "<br>" + "<br/>");
+    document.writeln("Proposed input:" + "<br>" + txtProposal + "<br>" + "<br/>");
+    document.writeln("Start date for the proposal:" + "<br>" + proposedDateInput + "<br>" + "<br/>"); 
+    document.writeln("End date for the proposal:" + "<br>" + proposedDurationInput + "<br>" + "<br/>"); 
+    document.writeln("Message:" + "<br>" + msg+ "<br>" + "<br/>");
+ }
+
+</script>
+
+</html>

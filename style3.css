@@ -1,0 +1,418 @@
+      /* CSS styles */
+
+      * {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          background: #080808;
+          color: #fff;
+      }
+
+      #header {
+          width: 100%;
+          height: 40vh;
+          background-color: black;
+          background-size: cover;
+          background-position: center;
+          background-color: black;
+          color: #fff;
+      }
+
+      .container {
+          padding: 10px 10%;
+      }
+
+      nav {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+      }
+
+      .logo {
+          width: 200px;
+      }
+
+
+      /* Navigation panel */
+      nav ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: flex;
+          justify-content: space-between;
+      }
+
+      nav ul li {
+          display: inline-block;
+          list-style: none;
+          margin: 10px 20px;
+      }
+
+      nav ul li a {
+          color: #fff;
+          text-decoration: none;
+          padding: 10px;
+          font-size: 18px;
+          position: relative;
+      }
+
+      /*hover underline effect*/
+
+      nav ul li a::after {
+          content: '';
+          width: 0;
+          height: 3px;
+          background: #ff004f;
+          position: absolute;
+          left: 0;
+          bottom: -6px;
+      }
+
+      nav ul li a:hover::after {
+          width: 100%;
+          background-color: #fff;
+          color: #333;
+      }
+
+      .header-text {
+          margin-top: 20%;
+          font-size: 30px;
+      }
+
+      main {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 50px;
+      }
+     /*------About------*/
+      #about {
+          padding: 80px 0;
+          color: #ababab;
+          font-weight: 500;
+      }
+
+      .row {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+      }
+
+      .about-col-1 {
+          flex-basis: 35%;
+      }
+
+      .about-col-1 img {
+          width: 100%;
+          border-radius: 15px;
+      }
+
+      .about-col-2 {
+          flex-basis: 50%;
+      }
+
+      .sub-title {
+          font-size: 25px;
+          font-weight: 200;
+          color: #fff;
+      }
+
+      .tab-titles {
+          text-decoration-line: underline;
+          display:flex;
+          gap: calc(2vh + 2px) calc(2vw + 2px);
+          margin: 20px 0 60px;
+          font-weight: 545;
+          color:lightgrey;
+      }
+
+      .tab-links {
+          cursor: pointer;
+          pointer-events: auto;
+          cursor: hand;
+          margin-right: 70px;
+          font-size: 20px;
+          font-weight: 300;
+          position: relative;
+      }
+      .tab-links:hover {
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+     }
+
+      .tab-links::after {
+          content: '';
+          width: 0;
+          height: 3px;
+          background: red;
+          position: absolute;
+          left: 0;
+          bottom: -8px;
+          transition: 0.5s;
+      }
+
+      .tab-links.active-link::after{
+          width: 100%;
+          color: #ff004f;
+      }
+
+      .tab-contents ul li {
+        list-style: none; 
+        margin: 10px 0;
+    }
+
+    .tab-contents ul li span {
+        color: #b547b5;
+        font-size: 15px;
+    }
+
+    .tab-contents{
+        display: none;
+      } 
+      
+    .tab-contents.active-tab {
+          display: block;
+          font-weight:500;
+      }
+
+      /*--------Previous clients-----*/
+      #previousclients {
+          padding: 30px 0;
+      }
+
+      .client-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          grid-gap: 40px;
+          margin-top: 50px;
+          color: lightgrey;
+      }
+
+      .client-list h3 {
+          color: #fff;
+      }
+
+      .client-list div {
+          background: #262626;
+          padding: 40px;
+          font-size: 15px;
+          font-weight: 300;
+          border-radius: 10px;
+          transition: background 0.5s, transform 0.5s;
+      }
+
+      .client-list p {
+          font-size: medium;
+      }
+
+      .client-list div:hover {
+          background: purple;
+          transform: translateY(-10px);
+      }
+
+      /*-----------general stuff-------------*/
+      section {
+          margin-bottom: 50px;
+      }
+
+      h1 {
+          font-size: 36px;
+          margin-bottom: 20px;
+      }
+
+      p {
+          font-size: 18px;
+          line-height: 1.5;
+      }
+
+      /*------copyright----*/
+      footer {
+          width: 100%;
+          background-color: #333;
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+          font-weight: 300;
+          margin-top: 10px;
+      }
+
+      /* -----projects------ */
+      #projects {
+          padding: 50px 0;
+      }
+
+      .sub-title {
+          font-weight: 700;
+      }
+
+      .project-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          grid-gap: 40px;
+          margin-top: 50px;
+      }
+
+      .project-list p {
+          font-size: medium;
+          color: lightsteelblue;
+      }
+
+      .project {
+          border-radius: 10px;
+          position: relative;
+          overflow: hidden;
+      }
+      #projects img{
+        padding-left: 150px;
+        padding-bottom: 50px;
+      }
+
+      #projects h2{
+        text-align: left;
+        padding: 30px;
+      }
+
+      .work img {
+          width: 100%;
+          border-radius: 10px;
+          display: block;
+      }
+
+      /*-------testimonials------*/
+      #testimonials {
+          padding: 30px 0;
+      }
+
+      .test h4 {
+        color: #b547b5;
+        text-align: center;
+    }
+
+      .test {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          grid-gap: 30px;
+          margin-top: 50px;
+          color: lightgrey;
+      }
+
+      .test div {
+          background: #262626;
+          padding: 20px;
+          font-size: 15px;
+          font-weight: 300;
+          border-radius: 10px;
+          transition: background 0.5s, transform 0.5s;
+      }
+
+      .test p {
+          font-size: medium;
+      }
+
+      .test div:hover {
+          background: lightcoral;
+          transform: translateY(-10px);
+      }
+
+      /*--------contact-------*/
+      .contact-left {
+          flex-basis: 35%;
+      }
+
+      .contact-right {
+          flex-basis: 60%;
+      }
+
+      .contact-left p {
+          /* for space in between */
+          margin-top: 30px;
+      }
+
+      .contact-left p i {
+          color: purple;
+          margin-right: 15px;
+          font-size: 25px;
+      }
+
+      .social-icons {
+          margin-top: 30px;
+      }
+
+      .social-icons a {
+          text-decoration: none;
+          font-size: 30px;
+          margin-right: 15px;
+          color: red;
+          display: inline-block;
+          transition: transform 00.5s;
+      }
+
+      .social-icons a:hover {
+          color: #ff004f;
+          transform: translateY(-5px);
+      }
+
+      .button {
+          display: inline-block;
+          background: red;
+          padding: 7px;
+      }
+
+      .contact-right form {
+          width: 100%;
+      }
+
+      form input,
+      form textarea {
+          width: 100%;
+          border: 0;
+          outline: none;
+          background: #262626;
+          padding: 10px;
+          margin: 15px 0;
+          color: whitesmoke;
+          font-size: 18px;
+          border-radius: 6px;
+      }
+           /*------Checkboxes---------
+      input[type=checkbox] + label{
+        display: block;
+        margin: 0.2em;
+      }
+
+      input[type=checkbox]{
+        display: none;
+      }
+
+      input[type=checkbox] +label::before{
+        content: "\2714";
+        border: o.1em solid #fff;
+        border-radius: 0.2em;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        padding-left: 0.2em;
+        padding-bottom: 0.3em;
+        margin-right: 0.2em;
+        vertical-align: bottom;
+        color: transparent;
+      }
+
+      input[type=checkbox]:checked +label::before{
+        background-color: purple;
+        border-color: #fff;
+        color:#fff;
+      }               */
+
+      /*------Checkboxes trial 2--------*/
+
+      #Message{
+        color: #fff;
+
+      }
+      
